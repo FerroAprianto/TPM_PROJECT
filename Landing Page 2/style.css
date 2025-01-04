@@ -1,0 +1,212 @@
+body {
+    font-family: sans-serif;
+    background-color: #0E0F26;
+    color: #fff;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .faq-button {
+    background-color: #0E0F26;
+    color: #fff;
+    padding: 10px 10px;
+    border-radius: 1000px;
+    text-align: center;
+    position: relative; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .faq-button::after {
+    content: '';
+    position: absolute;
+    height: 110%;
+    width: 102%;
+    border-radius: 1000px;
+    background-image: linear-gradient(to right, #302399, #5F23A5);
+    z-index: -1;
+  }
+
+  .accordion .contentbox {
+    position: relative;
+    margin: 10px 20px;
+
+}
+
+.accordion .contentbox .label {
+    position: relative;
+    padding: 10px;
+    background-color: #0E0F26;
+    margin-bottom: 2px;
+    cursor: pointer;
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion .contentbox .label::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    background-image: url('images/Group\ 31.svg');
+    width: 40px;
+    height: 40px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .accordion .contentbox.active .label::before{
+    transform: rotate(180deg)translateY(50%);
+  }
+
+.accordion .contentbox .content {
+    position: relative;
+    background: #0E0F26;
+    height: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    overflow-y: auto;
+    border-radius: 10px;
+    font-size: 24px;
+}
+
+.accordion .contentbox.active .content {
+    height: 120px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.sponsor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: radial-gradient(rgba(48, 35, 153, 0.5), #0E0F26 70%);
+  gap: 40px;
+}
+
+.sponsor .sponsor-logo {
+  width: 1000px;
+  height: 380px;
+  background-color: rgba(255, 255, 255, 0.001);
+  box-shadow: inset 0 0 50px rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items:  center;
+  color:#5F23A5;
+  border-style: solid;
+  border-width: 0.2px;
+}
+
+.sponsor .sponsor-logo .platinum {
+  background-color: rgba(red, green, blue, alpha);
+  border-style: solid;
+  border-width: 2px;
+  color: #81D9DD;
+  padding: 0px 30px;
+  border-radius: 1000px;
+  text-align: center;
+  position: relative; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor .sponsor-logo .gold {
+  background-color: rgba(red, green, blue, alpha);
+  border-style: solid;
+  border-width: 2px;
+  color: #FFBF00;
+  padding: 0px 30px;
+  border-radius: 1000px;
+  text-align: center;
+  position: relative; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor .sponsor-logo .silver {
+  background-color: rgba(red, green, blue, alpha);
+  border-style: solid;
+  border-width: 2px;
+  color: #C0C0C0;
+  padding: 0px 30px;
+  border-radius: 1000px;
+  text-align: center;
+  position: relative; 
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+.space {
+  height: 800px;
+}
+
+.footer {
+  display: flex; 
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.footer .footer-text {
+  background-color: rgba(red, green, blue, alpha);
+  border-style: solid;
+  border-width: 2px;
+  color: #ffffff;
+  width: 230px;
+  height: 40px;
+  border-radius: 1000px;
+  text-align: center;
+  position: relative; 
+  display: flex;
+  gap: 20px; 
+  justify-content: center;
+  align-items: center;
+}
+.gap1 {
+  height: 20px;
+}
+.gap2 {
+  height: 120px;
+}
+
+.footer2 {
+  display: flex; 
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.footer2 .Rectangle1, .Rectangle2 {
+  position: absolute;
+  transform: translateY(5px);
+}
+
+.footer2 .Rectangle3, .Rectangle2 {
+  position: absolute;
+  transform: translateY(5px);
+}
+
+.footer2 .text, .Rectangle2 {
+  position: absolute;
+  transform: translateY(2px);
+}

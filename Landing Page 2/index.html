@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hackathon 8.0 FAQs</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="button">
+        <div class="faq-button">Frequently Asked Questions</div>
+    </div>
+
+    <div class="accordion">
+        <div class="contentbox">
+            <div class="label"><h1>Apa saja persyaratan untuk mengikuti Hackathon 8.0?</h1></div>
+            <div class = "content">
+                <ul>
+                    <li>Peserta yang mengikuti Hackathon 8.0 wajib tergabung dalam satu tim dengan anggota maksimal 4 orang.</li>
+                    <li>Peserta merupakan warga negara Indonesia berusia 18 tahun hingga 25 tahun.</li>
+                    <li>Peserta wajib menyerahkan dokumen berikut pada halaman pendaftaran:
+                        <ol type="a">
+                            <li>CV (Curricullum Vitae)</li>
+                            <li>Portofolio</li>
+                            <li>Binusian: Kartu Binusian (Kartu Flazz)</li>
+                            <li>Umum: Kartu Tanda Penduduk (KTP)</li>
+                        </ol>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contentbox">
+            <div class="label"><h1>Apakah Hackathon 8.0 gratis?</h1></div>
+            <div class = "content">
+                <p>Hackathon 8.0 adalah acara berbayar. Setiap tim harus melakukan pembayaran sesuai dengan periode pendaftaran:</p>
+                <h4>Early Bird (30 Januari - 3 Februari)</h4>
+                <ul>
+                    <li>Binusian: Rp 180.000</li>
+                    <li>Umum: 200.000</li>
+                </ul>
+                <h4>Normal Price (4 Februari - 10 Februari)</h4>
+                <ul>
+                    <li>Binusian: 195.000</li>
+                    <li>Umum: 220.000</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="contentbox">
+            <div class="label"><h1>Hackathon 8.0 akan berlangsung dimana?</h1></div>
+            <div class = "content">
+                <p>Hackathon 8.0 akan dilaksanakan di markas Avengers.
+                    Jl. Venus 40, Bandung, Jawa Barat.</p>
+            </div>
+        </div>
+
+        <div class="contentbox">
+            <div class="label"><h1>Apakah saya bisa bergabung dengan lebih dari satu tim?</h1></div>
+            <div class = "content">
+                <p>Pada acara Hackathon 8.0, peserta tidak diperbolehkan bergabung dengan lebih dari satu tim. Jika melanggar, peserta tidak akan terdata sebagai peserta dalam acara ini.</p>
+            </div>
+        </div>
+
+        <div class="contentbox">
+            <div class="label"><h1>Jika saya tidak memiliki dasar pemrograman dan desain, <br>apakah saya masih bisa ikut berpartisipasi dalam Hackathon <br>8.0?</h1></div>
+            <div class = "content">
+                <p>Ya tentu saja, namun akan ada seleksi untuk menentukan tim mana yang akan lolos.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const accordion = document.getElementsByClassName("contentbox");
+        for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+        });
+        }
+    </script>
+
+    <div class="button">
+        <div class="faq-button">Sponsor</div>
+    </div>
+
+    <div class="gap1"></div>
+
+    <div class="sponsor">
+        <div class="sponsor-logo">
+            <div class="platinum">
+                <h1>Platinum</h1>
+            </div>
+            <img src="images/teleformance1.svg" alt="teleformance1">
+        </div>
+        <div class="sponsor-logo">
+            <div class="gold">
+                <h1>Gold</h1>
+            </div>
+            <img src="images/Line.svg" alt="line">
+        </div>
+        <div class="sponsor-logo">
+            <div class="silver">
+                <h1>Silver</h1>
+            </div>
+            <img src="images/teleformance3.svg" alt="teleformance3">
+        </div>
+
+    </div>
+    <div class="space"></div>
+    <div class="footer">
+        <div class = "footer-text"><p>Powered and Organized by</p></div>
+        <img src="images/BNCC-logo white 1.svg" alt="BNCC_Logo">
+    </div>
+
+    <div class="gap2"></div>
+
+    <div class="footer2">
+        <div class="Rectangle1">
+            <img src="images/Rectangle 97.svg" alt="Rectangle1">
+        </div>
+        <div class="Rectangle2">
+            <img src="images/Rectangle 96.svg" alt="Rectangle2">
+        </div>
+        <div class="Rectangle3">
+            <img src="images/Rectangle 95.svg" alt="Rectangle3">
+        </div>
+        <div class="text">
+            <img src="images/Frame 14.svg" alt="Text">
+        </div>
+    </div>
+</body>
+</html>
