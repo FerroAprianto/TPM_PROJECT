@@ -1,0 +1,493 @@
+{{-- Edit/Hapus mulai dari line 326. Line atasnya ga perlu di edit. 
+        Jadikan satu variable saja. jagan ada variable dengan angka 2 --}}
+        <!DOCTYPE html>
+        <html lang="en">
+          <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link
+              href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+              rel="stylesheet"
+            />
+            <title>Document</title>
+            <link rel="stylesheet" href="{{ asset('css/register.css') }}" />
+            <script src="/js/register.js" defer></script>
+          </head>
+          <body>
+            <div class="container">
+              <div class="wrapper">
+                <nav class="nav">
+                  <h3 class="title">Hackaton</h3>
+                  <div class="nav-menu">
+                    <ul>
+                      <li><a href="/html/index.html">Home</a></li>
+                      <li><a href="/html/index.html">Champion Prizes</a></li>
+                      <li><a href="/html/index.html">Mentor & Jury</a></li>
+                      <li><a href="/html/index.html">About</a></li>
+                      <li><a href="/html/index.html">FAQ</a></li>
+                      <li><a href="/html/index.html">Timeline</a></li>
+                    </ul>
+                  </div>
+                  <div class="sign-in">
+                    <button class="signin-btn">
+                      <a href="{{ route('login') }}" class="btnsign"> Sign In</a>
+                    </button>
+                  </div>
+                </nav>
+              </div>
+        
+              <div class="Registration-title">
+                <h1>REGISTRATION</h1>
+              </div>
+              <div class="hexagon">
+                <div class="progress" id="progress"></div>
+                <img src="/jpg/Hexagon.png" class="Hex progress-step-active" />
+                <div class="line"></div>
+                <img src="/jpg/Hexagon.png" class="Hex" />
+                <div class="line"></div>
+                <img src="/jpg/Hexagon.png" class="Hex" />
+              </div>
+              <div class="mt-5">
+                @if($errors->any())
+                    <div class="col-12">
+                        @foreach($errors->all() as $error)
+                            <div class="alert alert-danger">{{$error}}<br></div>
+                        @endforeach
+                    </div>
+                @endif
+        
+                @if(session()->has('error'))
+                    <div class="alert alert-danger">{{session('error')}}<br></div>
+                @endif
+        
+                @if(session()->has('success'))
+                    <div class="alert alert-success">{{session('success')}}<br></div>
+                @endif
+            </div>
+              <form action="{{ route('register.post') }}" method="POST" enctype="multipart/form-data" data-multi-step class="multi-step-form" id="form" name="form">
+                @csrf   
+                <div class="main">
+                  <div class="Registration-container" data-step>
+                    <div class="Registration-header"><h2>Group Information</h2></div>
+                    <div class="Registration-form">
+                      <div class="form-group">
+                        <label for="name">Team's name</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="team_name"
+                            placeholder="Masukkan Nama Tim"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="username-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Password</label>
+                        <div class="input">
+                          <input
+                            type="password"
+                            class="form-control"
+                            id="password"
+                            name="password"
+                            placeholder="Masukkan Password"
+                            required
+                          />
+                          <img src="/jpg/Eye Open.png" id="eye" />
+                        </div>
+                        <div class="error" id="password-error">
+                          Password must be atleast 8 character,<br />
+                          with number, uppercase, and special character
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <div class="input">
+                          <input
+                            type="password"
+                            {{-- class="form-control" --}}
+                            id="confirm-password"
+                            name="password_confirmation"
+                            placeholder="Masukkan Password"
+                            required
+                          />
+                          <img src="/jpg/Eye Open - 2.png" id="eye2" />
+                        </div>
+                        <div class="error" id="confirm-password-error">
+                          Password must be the same
+                        </div>
+                      </div>
+                      <div class="form-group2">
+                        <label>
+                          <input
+                            type="radio"
+                            class="form-control"
+                            id="binusian"
+                            name="isBinusian"
+                            value="binusian"
+                            required
+                          />
+                          <div class="checkmark"></div>
+                          <span for="binusian">Binusian</span>
+                        </label>
+                        <label>
+                          <input
+                            type="radio"
+                            class="form-control"
+                            id="non-binusian"
+                            name="isBinusian"
+                            value="non-binusian"
+                            required
+                          />
+                          <div class="checkmark"></div>
+                          <span for="non-binusian">Non-Binusian</span>
+                        </label>
+                        <div class="error" id="radio-error">
+                          Please choose one of the options
+                        </div>
+                      </div>
+                      <div class="form-btn">
+                        <button type="button" class="next-btn" data-next>Next</button>
+                      </div>
+                      <div class="alreadyhaveaccount">
+                        <p>Already have an account?</p>
+                        <a href="{{ route('login') }}">Sign In Here</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main">
+                  <div class="Registration-container" data-step>
+                    <div class="Registration-header"><h2>Leader Information</h2></div>
+                    <div class="Registration-form">
+                      <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="fullname"
+                            name="leader"
+                            placeholder="Masukkan Nama Lengkap"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="fullname-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            placeholder="Masukkan Email"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="email-error">Must using '@'</div>
+                      </div>
+                      <div class="form-group">
+                        <label for="number">WhatsApp Number</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="number"
+                            name="phone"
+                            placeholder="Masukkan Nomor Telepon"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="number-error">
+                          Must be atleast 9 number
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="LineID">Line ID</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="LineID"
+                            name="line_id"
+                            placeholder="Masukkan Line ID"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="lineID-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="GithubID">Github ID</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="GithubID"
+                            name="github_id"
+                            placeholder="Masukkan Github ID"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="githubID-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="BirthPlace">Birth Place</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            class="form-control"
+                            id="BirthPlace"
+                            name="birth_place"
+                            placeholder="Masukkan Tempat Lahir"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="birthPlace-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="BirthDate">Birth Date</label>
+                        <div class="input">
+                          <input
+                            type="date"
+                            class="form-control"
+                            id="BirthDate"
+                            name="birth_date"
+                            placeholder="Masukkan Tanggal Lahir"
+                            required
+                          />
+                        </div>
+                        <div class="error" id="birthDate-error">
+                          Participant must be atleast 17 years old
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="CV">Upload CV</label>
+                        <div class="input">
+                          <input
+                            type="file"
+                            class="form-control"
+                            id="CV"
+                            name="cv"
+                            placeholder="Upload CV Kamu"
+                            required
+                          />
+                          <img src="/jpg/Upload Circle.png" id="circle" />
+                        </div>
+                        <div class="error" id="CV-error">
+                          File must be PDF/JPG/JPEG/PNG
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="BinusianCard">Upload Binusian Card</label>
+                        <div class="input">
+                          <input 
+                          type="file" 
+                          class="form-control"
+                          id="IDCard" 
+                          name="IDCard" 
+                          required 
+                          />
+                          <img src="/jpg/Upload Circle - 2.png" id="circle" />
+                        </div>
+                        <div class="error" id="IDCard-error">
+                          File must be PDF/JPG/JPEG/PNG
+                        </div>
+                      </div>
+                      <div class="form-btn">
+                        <button type="button" class="prev-btn" data-previous>
+                          Back
+                        </button>
+                        <button type="button" class="next-btn" data-next>Next</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+        
+                {{-- Edit/Hapus mulai dari line 326. Line atasnya ga perlu di edit. 
+                Jadikan satu variable saja. jagan ada variable dengan angka 2 --}}
+        
+                <div class="main">
+                  <div class="Registration-container" data-step>
+                    <div class="Registration-header"><h2>Leader Information</h2></div>
+                    <div class="Registration-form">
+                      <div class="form-group">
+                        <label for="fullname">Full Name</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            id="fullname2"
+                            name="fullname2"
+                            placeholder="Masukkan Nama Lengkap"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="fullname2-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Email</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            id="email2"
+                            name="email2"
+                            placeholder="Masukkan Email"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="email2-error">Must using '@'</div>
+                      </div>
+                      <div class="form-group">
+                        <label for="number">WhatsApp Number</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            id="number2"
+                            name="number2"
+                            placeholder="Masukkan Nomor Telepon"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="number2-error">
+                          Must be atleast 9 number
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="LineID">Line ID</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            id="LineID2"
+                            name="LineID2"
+                            placeholder="Masukkan Line ID"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="lineID2-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="GithubID">Github ID</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            id="GithubID2"
+                            name="GithubID2"
+                            placeholder="Masukkan Github ID"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="githubID2-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="BirthPlace">Birth Place</label>
+                        <div class="input">
+                          <input
+                            type="text"
+                            id="BirthPlace2"
+                            name="BirthPlace2"
+                            placeholder="Masukkan Tempat Lahir"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="birthPlace2-error">
+                          This field can't be empty
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="BirthDate">Birth Date</label>
+                        <div class="input">
+                          <input
+                            type="date"
+                            id="BirthDate2"
+                            name="BirthDate2"
+                            placeholder="Masukkan Tanggal Lahir"
+                            {{-- required --}}
+                          />
+                        </div>
+                        <div class="error" id="birthDate2-error">
+                          Participant must be atleast 17 years old
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="CV">Upload CV</label>
+                        <div class="input">
+                          <input
+                            type="file"
+                            id="CV2"
+                            name="CV2"
+                            placeholder="Upload CV Kamu"
+                            {{-- required --}}
+                          />
+                          <img src="/jpg/Upload Circle.png" id="circle" />
+                        </div>
+                        <div class="error" id="CV2-error">
+                          File must be PDF/JPG/JPEG/PNG
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="IDCard">Upload ID Card</label>
+                        <div class="input">
+                          <input
+                            type="file"
+                            id="IDCard2"
+                            name="IDCard2"
+                            placeholder="Upload KTP Kamu"
+                            {{-- required --}}
+                          />
+                          <img src="/jpg/Upload Circle - 2.png" id="circle" />
+                        </div>
+                        <div class="error" id="IDCard2-error">
+                          File must be PDF/JPG/JPEG/PNG
+                        </div>
+                      </div>
+                      <div class="form-btn">
+                        <button type="button" class="prev-btn" data-previous>
+                          Back
+                        </button>
+                        <button type="button" class="next-btn" data-next>Next</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="main">
+                  <div class="Registration-container" data-step>
+                    <div class="header"><h2>Thank You For Your Participant</h2></div>
+                    <div class="goodluck"><h2>Goodluck and enjoy</h2></div>
+                    <div class="hackaton">
+                      <div class="title1"><h2>HACKATON</h2></div>
+                      <div class="title2"><h2>8.0</h2></div>
+                    </div>
+                    <div class="form-btn">
+                      <button type="button" class="prev-btn" data-previous>Back</button>
+                      {{-- Submit jangan di rubah --}}
+                      <button type="submit" class="next-btn" data-next>Next</button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </body>
+        </html>
+        

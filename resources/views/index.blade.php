@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HACKATON</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}" />
+  </head>
+  <body>
+    <header>
+      <div class="Logo">HACKATON</div>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#champion-prizes">Champion Prizes</a>
+        <a href="#faq">Mentor & Jury</a>
+        <a href="#about">About</a>
+        <a href="#faq">Faq</a>
+        <a href="#faq">Timeline</a>
+      </nav>
+
+      <a href="{{ route('login') }}" class="login-button">Login</a>
+    </header>
+    <section id="home" class="hero">
+      <div class="title-content">
+        <h1>HACKATON <span>8.0</span></h1>
+        <p class="bridging">
+          Bridging The Digital Divide: Building For a Better World
+        </p>
+      </div>
+      <br>
+      <br>
+      <br>
+      <div class="img-content">
+        <img
+          src="../jpg/Rectangle 3.png"
+          alt="Bottom Image"
+          class="bottom-img"
+        />
+        <img src="../jpg/hero.png" alt="Top Image" class="top-img" />
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <a href="#" class="about-button">About Hackathon</a>
+      <h1>
+        The Peak Event Of TechnoScape That Forms<br />A 36-Hour Coding
+        Competition
+      </h1>
+      <p>
+        It challenges participants to create creative applications or websites
+        to solve real life problems. Participants will get the opportunity to
+        get insights from mentors at the mentoring session.
+      </p>
+    </section>
+
+    <section id="champion-prizes" class="champion-benefit">
+      <a href="#" class="about-champion">Champion benefit</a>
+      <div class="img-content-champion">
+        <img src="/jpg/podium juara 2.png" alt="" />
+        <img src="/jpg/podium juara 1.png" alt="" />
+        <img src="/jpg/Podium juara 3.png" alt="" />
+      </div>
+    </section>
+
+    <section id="features" class="features">
+      <a href="#" class="about-features">why you should join</a>
+      <div class="img-content-features">
+        <img src="/jpg/networking.png" alt="" />
+        <img src="/jpg/mentoring.png" alt="" />
+        <img src="/jpg/hard skill.png" alt="" />
+        <img src="/jpg/portofolio.png" alt="" />
+      </div>
+    </section>
+
+    <section id="faq" class="faq">
+      <a href="#" class="about-faq">Frequently Asked Questions</a>
+      <div class="accordion">
+        <div class="contentbox">
+          <div class="label">
+            <h1>Apa saja persyaratan untuk mengikuti Hackathon 8.0?</h1>
+          </div>
+          <div class="content">
+            <ul>
+              <li>
+                Peserta yang mengikuti Hackathon 8.0 wajib tergabung dalam satu
+                tim dengan anggota maksimal 4 orang.
+              </li>
+              <li>
+                Peserta merupakan warga negara Indonesia berusia 18 tahun hingga
+                25 tahun.
+              </li>
+              <li>
+                Peserta wajib menyerahkan dokumen berikut pada halaman
+                pendaftaran:
+                <ol type="a">
+                  <li>CV (Curricullum Vitae)</li>
+                  <li>Portofolio</li>
+                  <li>Binusian: Kartu Binusian (Kartu Flazz)</li>
+                  <li>Umum: Kartu Tanda Penduduk (KTP)</li>
+                </ol>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contentbox">
+          <div class="label"><h1>Apakah Hackathon 8.0 gratis?</h1></div>
+          <div class="content">
+            <p>
+              Hackathon 8.0 adalah acara berbayar. Setiap tim harus melakukan
+              pembayaran sesuai dengan periode pendaftaran:
+            </p>
+            <h4>Early Bird (30 Januari - 3 Februari)</h4>
+            <ul>
+              <li>Binusian: Rp 180.000</li>
+              <li>Umum: 200.000</li>
+            </ul>
+            <h4>Normal Price (4 Februari - 10 Februari)</h4>
+            <ul>
+              <li>Binusian: 195.000</li>
+              <li>Umum: 220.000</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="contentbox">
+          <div class="label">
+            <h1>Hackathon 8.0 akan berlangsung dimana?</h1>
+          </div>
+          <div class="content">
+            <p>
+              Hackathon 8.0 akan dilaksanakan di markas Avengers. Jl. Venus 40,
+              Bandung, Jawa Barat.
+            </p>
+          </div>
+        </div>
+
+        <div class="contentbox">
+          <div class="label">
+            <h1>Apakah saya bisa bergabung dengan lebih dari satu tim?</h1>
+          </div>
+          <div class="content">
+            <p>
+              Pada acara Hackathon 8.0, peserta tidak diperbolehkan bergabung
+              dengan lebih dari satu tim. Jika melanggar, peserta tidak akan
+              terdata sebagai peserta dalam acara ini.
+            </p>
+          </div>
+        </div>
+
+        <div class="contentbox">
+          <div class="label">
+            <h1>
+              Jika saya tidak memiliki dasar pemrograman dan desain,
+              <br />apakah saya masih bisa ikut berpartisipasi dalam Hackathon
+              <br />8.0?
+            </h1>
+          </div>
+          <div class="content">
+            <p>
+              Ya tentu saja, namun akan ada seleksi untuk menentukan tim mana
+              yang akan lolos.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const accordion = document.getElementsByClassName("contentbox");
+      for (i = 0; i < accordion.length; i++) {
+        accordion[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+        });
+      }
+    </script>
+
+    <section id="sponsor" class="sponsor">
+      <a href="#" class="about-sponsor">sponsor</a>
+      <div class="sponsor">
+        <div class="sponsor-logo">
+            <div class="platinum">
+                <h1>Platinum</h1>
+            </div>
+            <img src="/jpg/teleformance1 (1).svg" alt="teleformance1">
+        </div>
+        <div class="sponsor-logo">
+            <div class="gold">
+                <h1>Gold</h1>
+            </div>
+            <img src="/jpg/Line.svg" alt="line">
+        </div>
+        
+        <div class="sponsor-logo">
+            <div class="silver">
+                <h1>Silver</h1>
+        </div>
+      <img src="/jpg/teleformance3.svg" alt="teleformance3">
+      </div>
+    </section>
+  </div>
+
+
+  <div class="space"></div>
+  <div class="footer">
+      <div class = "footer-text"><p>Powered and Organized by</p></div>
+      <img src="/jpg/BNCC-logo white 1.svg" alt="BNCC_Logo">
+  </div>
+
+  <div class="gap2"></div>
+
+  <div class="footer2">
+      <div class="Rectangle1">
+          <img src="/jpg/Rectangle 97.svg" alt="Rectangle1">
+      </div>
+      <div class="Rectangle2">
+          <img src="/jpg/Rectangle 96.svg" alt="Rectangle2">
+      </div>
+      <div class="Rectangle3">
+          <img src="/jpg/Rectangle 95.svg" alt="Rectangle3">
+      </div>
+      <div class="text">
+          <img src="/jpg/Frame 14.svg" alt="Text">
+      </div>
+  </div>
+
+  </body>
+</html>
